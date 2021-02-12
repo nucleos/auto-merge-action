@@ -1,0 +1,8 @@
+# These settings are synced to GitHub by https://probot.github.io/apps/settings/
+
+_extends: .github
+
+repository:
+  name: auto-merge-action
+  description: Automerge labeled GitHub Pull Requests.
+  topics: console, merge, automerge, action, automation, github-actions

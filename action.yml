@@ -1,0 +1,24 @@
+# Definition of the github action
+# as per https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action
+
+name: 'nucleos/auto-merge-action'
+description: 'Automerge labeled GitHub Pull Requests.'
+
+inputs:
+    label:
+        description: 'Label that indicates a pull request for merge.'
+        required: false
+        default: 'automerge'
+    ignore-label:
+        description: 'Label that forbids a merge.'
+        required: false
+        default: 'wip'
+    options:
+        description: 'Additional options (e.g. --dry-run)'
+        required: false
+
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
+    args:
+        - "-l ${{ inputs.label }} -i ${{ inputs.ignore-label }} ${{ inputs.options }} ${{ inputs.GITHUB_REPOSITORY }}"

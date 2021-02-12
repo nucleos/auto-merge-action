@@ -1,0 +1,27 @@
+#!/usr/bin/env php
+<?php
+require __DIR__.'/vendor/autoload.php';
+
+use Github\Client;
+use Nucleos\AutoMergeAction\Client\PullRequests;
+use Nucleos\AutoMergeAction\Command\MergeCommand;
+use Symfony\Component\Console\Application;
+use Symfony\Component\Dotenv\Dotenv;
+
+(new Dotenv())->bootEnv(__DIR__ .'/.env');
+
+$client = new Client();
+$client->authenticate($_ENV['GITHUB_TOKEN'], null, 'access_token_header');
+
+$resultPager = new Github\ResultPager($client);
+
+$pullRequests = new PullRequests($client, $resultPager);
+
+$application = new Application('Nucleos Automerge Action');
+
+$command = new MergeCommand($pullRequests);
+
+$application->add($command);
+
+$application->setDefaultCommand($command->getName(), true);
+$application->run();

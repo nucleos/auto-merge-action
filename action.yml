@@ -9,11 +9,18 @@ branding:
     color: 'green'
 
 inputs:
+    github_token:
+        description: 'Token for the repo. Can be passed in using $\{{ secrets.GITHUB_TOKEN }}'
+        required: true
+    repository:
+        description: 'Repository name to check. Default or empty value represents current github repository (${GITHUB_REPOSITORY})'
+        default: ''
+        required: false
     label:
         description: 'Label that indicates a pull request for merge.'
         required: false
         default: 'automerge'
-    ignore-label:
+    ignore_label:
         description: 'Label that forbids a merge.'
         required: false
         default: 'wip'
@@ -24,5 +31,3 @@ inputs:
 runs:
     using: 'docker'
     image: 'Dockerfile'
-    args:
-        - "-l ${{ inputs.label }} -i ${{ inputs.ignore-label }} ${{ inputs.options }} ${{ inputs.GITHUB_REPOSITORY }}"

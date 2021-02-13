@@ -19,4 +19,4 @@ ADD . /app/
 
 RUN COMPOSER_CACHE_DIR=/dev/null composer install --no-dev --no-scripts
 
-ENTRYPOINT ["/app/auto-merge"]
+ENTRYPOINT ["/app/entrypoint.sh"]

@@ -46,7 +46,7 @@ final class Configuration
 
         $this->repository   = $options['repository'];
         $this->label        = $options['label']        ?? $this->label;
-        $this->ignoreLabel  = $options['ignore-label']  ?? $this->ignoreLabel;
+        $this->ignoreLabel  = $options['ignore-label'] ?? $this->ignoreLabel;
         $this->squash       = $options['squash']       ?? $this->squash;
         $this->dryRun       = $options['dry-run']      ?? $this->dryRun;
     }

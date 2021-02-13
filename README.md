@@ -26,7 +26,7 @@ jobs:
 
     steps:
     - name: "Automerge Action"
-      uses: docker://nucleos/auto-merge-action
+      uses: "nucleos/auto-merge-action@1"
       env:
         "GITHUB_TOKEN": ${{ secrets.GITHUB_TOKEN }}
 ```

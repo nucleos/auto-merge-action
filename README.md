@@ -1,8 +1,6 @@
 GitHub AutoMerge Action
 =======================
 
-[![License](https://poser.pugx.org/nucleos/auto-merge-action/license)](LICENSE.md)
-
 [![Continuous Integration](https://github.com/nucleos/auto-merge-action/workflows/Continuous%20Integration/badge.svg?event=push)](https://github.com/nucleos/auto-merge-action/actions?query=workflow%3A"Continuous+Integration"+event%3Apush)
 [![Code Coverage](https://codecov.io/gh/nucleos/auto-merge-action/graph/badge.svg)](https://codecov.io/gh/nucleos/auto-merge-action)
 [![Type Coverage](https://shepherd.dev/github/nucleos/auto-merge-action/coverage.svg)](https://shepherd.dev/github/nucleos/auto-merge-action)

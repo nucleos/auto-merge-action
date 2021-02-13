@@ -8,7 +8,9 @@ use Nucleos\AutoMergeAction\Command\MergeCommand;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Dotenv\Dotenv;
 
-(new Dotenv())->bootEnv(__DIR__ .'/.env');
+if (file_exists(__DIR__ .'/.env')) {
+    (new Dotenv())->bootEnv(__DIR__.'/.env');
+}
 
 $client = new Client();
 $client->authenticate($_ENV['GITHUB_TOKEN'], null, 'access_token_header');

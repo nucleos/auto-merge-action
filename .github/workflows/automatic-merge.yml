@@ -1,0 +1,19 @@
+name: "Automatic Merge"
+
+on:
+  schedule:
+    - cron:  '0 * * * *'
+
+jobs:
+  merge:
+    name: "Merge Pull Requests"
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: "Checkout"
+      uses: "actions/checkout@v2"
+
+    - name: "Merge"
+      uses: "./"
+      env:
+        "GITHUB_TOKEN": ${{ secrets.GITHUB_TOKEN }}

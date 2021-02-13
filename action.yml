@@ -1,13 +1,13 @@
 # Definition of the github action
 # as per https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action
 
-name: 'nucleos/auto-merge-action'
+name: 'GitHub AutoMerge Action'
 description: 'Automerge labeled GitHub Pull Requests.'
 
 branding:
     icon: 'git-merge'
     color: 'green'
-    
+
 inputs:
     label:
         description: 'Label that indicates a pull request for merge.'

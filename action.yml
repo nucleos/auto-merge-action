@@ -4,6 +4,10 @@
 name: 'nucleos/auto-merge-action'
 description: 'Automerge labeled GitHub Pull Requests.'
 
+branding:
+    icon: 'git-merge'
+    color: 'green'
+    
 inputs:
     label:
         description: 'Label that indicates a pull request for merge.'

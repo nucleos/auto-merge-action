@@ -73,8 +73,9 @@ final class MergeCommand extends Command
         ));
 
         $repository   = Repository::fromString($config->repository());
+        $label        = Label::fromString($config->label());
         $pullRequests = $this->pullRequests->search(
-            Query::labeled($repository, Label::fromString($config->label()), Label::fromString($config->ignoreLabel()))
+            Query::labeled($repository, $label, Label::fromString($config->ignoreLabel()))
         );
 
         if ([] === $pullRequests) {
@@ -91,6 +92,7 @@ final class MergeCommand extends Command
                     $io->write('<fg=yellow>[READY]</> ');
                 } else {
                     $this->pullRequests->merge($repository, $pullRequest, $config->isSquash());
+                    $this->pullRequests->removeLabel($repository, $pullRequest, $label);
 
                     if ($config->isSquash()) {
                         $io->write('<fg=green>[SQUASHED]</> ');

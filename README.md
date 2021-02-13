@@ -10,6 +10,8 @@ This GitHub action will scan all open pull requests in the current project and m
 The pull request needs to be mergeable (no conflicts), got a green build and contains a label (default: `automerge`).
 If the pull request contains an ignore label (default: `wip`), the pull request will be skipped.
 
+After a succesul merge, the label is removed.
+
 The action is designed to run asynchronously (e.g. every hour, once a day), so it can take a few minutes after the pull request got merged.
 
 ## Usage

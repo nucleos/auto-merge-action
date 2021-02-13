@@ -15,6 +15,7 @@ use Github\Client as GithubClient;
 use Github\ResultPagerInterface;
 use Nucleos\AutoMergeAction\Client\PullRequest\Query;
 use Nucleos\AutoMergeAction\Domain\Issue;
+use Nucleos\AutoMergeAction\Domain\Label;
 use Nucleos\AutoMergeAction\Domain\PullRequest;
 use Nucleos\AutoMergeAction\Domain\Repository;
 use Webmozart\Assert\Assert;
@@ -62,5 +63,15 @@ final class PullRequests
 
             return PullRequest::fromResponse($response);
         }, $this->githubPager->fetchAll($this->github->search(), 'issues', [$query->toString()]));
+    }
+
+    public function removeLabel(Repository $repository, PullRequest $pullRequest, Label $label): void
+    {
+        $this->github->issue()->labels()->remove(
+            $repository->username(),
+            $repository->name(),
+            $pullRequest->issue()->toInt(),
+            $label->name(),
+        );
     }
 }

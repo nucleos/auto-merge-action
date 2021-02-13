@@ -4,5 +4,5 @@ _extends: .github
 
 repository:
   name: auto-merge-action
-  description: Automerge labeled GitHub Pull Requests.
+  description: 🤖 Automerge labeled GitHub Pull Requests.
   topics: console, merge, automerge, action, automation, github-actions

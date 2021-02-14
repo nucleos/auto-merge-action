@@ -18,11 +18,15 @@ use Webmozart\Assert\Assert;
  */
 final class Configuration
 {
+    public const DEFAULT_LABEL = 'automerge';
+
+    public const DEFAULT_IGNORE_LABEL = 'wip';
+
     private string $repository;
 
-    private string $label = 'automerge';
+    private string $label = self::DEFAULT_LABEL;
 
-    private string $ignoreLabel = 'wip';
+    private string $ignoreLabel = self::DEFAULT_IGNORE_LABEL;
 
     private bool $squash = false;
 

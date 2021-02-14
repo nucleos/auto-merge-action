@@ -39,7 +39,7 @@ final class PullRequests
             $pullRequest->issue()->toInt(),
             $squash ? '' : $pullRequest->title(),
             $pullRequest->head()->sha()->toString(),
-            $squash,
+            $squash ? 'squash' : 'merge',
             $title
         );
     }

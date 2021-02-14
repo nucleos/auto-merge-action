@@ -66,7 +66,8 @@ final class MergeCommand extends Command
 
         $io = new SymfonyStyle($input, $output);
         $io->title(sprintf(
-            'Merge pull requests with "%s" label (ignoring label: %s)',
+            'Scanning "%s" for "%s" label (ignoring label: %s)',
+            $config->repository(),
             $config->label(),
             $config->ignoreLabel()
         ));

@@ -85,14 +85,8 @@ final class MergeCommand extends Command
 
         foreach ($pullRequests as $pullRequest) {
             if ($pullRequest->updatedWithinTheLast60Seconds()) {
-                if ($io->isVerbose()) {
-                    $io->info('Skip very new PRs to ignore workflow delay');
-                }
-
-                continue;
-            }
-
-            if (true === $pullRequest->isMergeable() && $pullRequest->isCleanBuild()) {
+                $io->write('<fg=yellow>[SKIPPED]</> ');
+            } elseif (true === $pullRequest->isMergeable() && $pullRequest->isCleanBuild()) {
                 if ($config->isDryRun()) {
                     $io->write('<fg=yellow>[READY]</> ');
                 } else {

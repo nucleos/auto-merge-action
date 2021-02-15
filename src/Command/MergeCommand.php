@@ -11,6 +11,7 @@
 
 namespace Nucleos\AutoMergeAction\Command;
 
+use Github\Exception\RuntimeException;
 use Nucleos\AutoMergeAction\Client\PullRequest\Query;
 use Nucleos\AutoMergeAction\Client\PullRequests;
 use Nucleos\AutoMergeAction\Config\Configuration;
@@ -102,7 +103,7 @@ final class MergeCommand extends Command
         ]);
 
         foreach ($pullRequests as $pullRequest) {
-            $status = '<fg=red>ERROR</>';
+            $status = '<fg=red>UNSTABLE</>';
 
             if ($pullRequest->updatedWithinTheLast60Seconds()) {
                 $status = '<fg=yellow>SKIPPED</>';
@@ -110,13 +111,19 @@ final class MergeCommand extends Command
                 if ($config->isDryRun()) {
                     $io->write('<fg=yellow>READY</> ');
                 } else {
-                    $this->pullRequests->merge($repository, $pullRequest, $config->isSquash());
-                    $this->pullRequests->removeLabel($repository, $pullRequest, $label);
-
                     if ($config->isSquash()) {
                         $status = '<fg=green>SQUASHED</>';
                     } else {
                         $status = '<fg=green>MERGED</>';
+                    }
+
+                    try {
+                        $this->pullRequests->merge($repository, $pullRequest, $config->isSquash());
+                        $this->pullRequests->removeLabel($repository, $pullRequest, $label);
+                    } catch (RuntimeException $exception) {
+                        $status = '<fg=red>ERROR</>';
+
+                        $io->error($exception->getMessage());
                     }
                 }
             }

@@ -35,7 +35,7 @@ jobs:
 
     steps:
     - name: "Merge"
-      uses: "nucleos/auto-merge-action@1"
+      uses: "nucleos/auto-merge-action@1.0.0"
       env:
         "GITHUB_TOKEN": ${{ secrets.GITHUB_TOKEN }}
 ```

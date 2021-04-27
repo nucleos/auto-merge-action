@@ -57,13 +57,7 @@ final class MergeCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $config = Configuration::fromInput([
-            'repository'   => $input->getArgument('repository'),
-            'label'        => $input->getOption('label'),
-            'ignore-label' => $input->getOption('ignore-label'),
-            'squash'       => $input->getOption('squash'),
-            'dry-run'      => $input->getOption('dry-run'),
-        ]);
+        $config = $this->getConfiguration($input);
 
         $io = new SymfonyStyle($input, $output);
 
@@ -136,5 +130,16 @@ final class MergeCommand extends Command
         }
 
         return self::SUCCESS;
+    }
+
+    private function getConfiguration(InputInterface $input): Configuration
+    {
+        return Configuration::fromInput([
+            'repository'   => $input->getArgument('repository'),
+            'label'        => $input->getOption('label'),
+            'ignore-label' => $input->getOption('ignore-label'),
+            'squash'       => $input->getOption('squash'),
+            'dry-run'      => $input->getOption('dry-run'),
+        ]);
     }
 }

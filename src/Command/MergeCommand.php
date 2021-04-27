@@ -55,6 +55,11 @@ final class MergeCommand extends Command
         ;
     }
 
+    /**
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     * @SuppressWarnings(PHPMD.NPathComplexity)
+     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+     */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $config = $this->getConfiguration($input);

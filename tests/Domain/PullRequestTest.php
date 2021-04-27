@@ -19,6 +19,9 @@ use Nucleos\AutoMergeAction\Domain\PullRequest;
 use Nucleos\AutoMergeAction\Tests\Factory\PullRequestFactory;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @SuppressWarnings(PHPMD.TooManyPublicMethods)
+ */
 final class PullRequestTest extends TestCase
 {
     use Helper;

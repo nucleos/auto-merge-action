@@ -19,7 +19,7 @@
         "symfony/console": "^5.2",
         "symfony/dotenv": "^5.2",
         "symfony/http-client": "^5.2",
-        "symfony/string": "5.2.*",
+        "symfony/string": "5.3.*",
         "webmozart/assert": "^1.9"
     },
     "require-dev": {

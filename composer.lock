@@ -1222,7 +1222,7 @@
         },
         {
             "name": "symfony/dotenv",
-            "version": "v5.2.12",
+            "version": "v5.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dotenv.git",
@@ -1273,7 +1273,7 @@
                 "environment"
             ],
             "support": {
-                "source": "https://github.com/symfony/dotenv/tree/v5.2.12"
+                "source": "https://github.com/symfony/dotenv/tree/v5.3.4"
             },
             "funding": [
                 {

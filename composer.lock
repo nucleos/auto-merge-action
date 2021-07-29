@@ -1057,20 +1057,21 @@
         },
         {
             "name": "symfony/console",
-            "version": "v5.2.12",
+            "version": "v5.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "eb07d40cdcfebc158481a028d5a1a498f5e0810c"
+                "reference": "ebd610dacd40d75b6a12bf64b5ccd494fc7d6ab1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/eb07d40cdcfebc158481a028d5a1a498f5e0810c",
-                "reference": "eb07d40cdcfebc158481a028d5a1a498f5e0810c",
+                "url": "https://api.github.com/repos/symfony/console/zipball/ebd610dacd40d75b6a12bf64b5ccd494fc7d6ab1",
+                "reference": "ebd610dacd40d75b6a12bf64b5ccd494fc7d6ab1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.5",
+                "symfony/deprecation-contracts": "^2.1",
                 "symfony/polyfill-mbstring": "~1.0",
                 "symfony/polyfill-php73": "^1.8",
                 "symfony/polyfill-php80": "^1.16",
@@ -1135,7 +1136,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v5.2.12"
+                "source": "https://github.com/symfony/console/tree/v5.3.4"
             },
             "funding": [
                 {
@@ -1151,7 +1152,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-26T16:33:12+00:00"
+            "time": "2021-07-26T16:33:26+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",

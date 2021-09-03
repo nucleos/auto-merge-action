@@ -69,7 +69,7 @@ final class QueryTest extends TestCase
     }
 
     /**
-     * @return \Generator<string, array{0: string}>
+     * @return Generator<string, array{0: string}>
      */
     public static function lengthGreaterThan256Characters(): Generator
     {

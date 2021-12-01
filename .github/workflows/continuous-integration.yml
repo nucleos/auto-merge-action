@@ -60,6 +60,8 @@ jobs:
             php${{ matrix.php-version }}-php-cs-fixer-
 
       - name: "Run friendsofphp/php-cs-fixer"
+        env:
+            PHP_CS_FIXER_IGNORE_ENV: 1
         run: composer cs-diff
 
   static-code-analysis:

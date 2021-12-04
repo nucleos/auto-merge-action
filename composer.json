@@ -51,26 +51,5 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "scripts": {
-        "post-install-cmd": [
-            "@composer bin all install --ansi"
-        ],
-        "post-update-cmd": [
-            "@composer bin all install --ansi"
-        ],
-        "coverage": "vendor/bin/phpunit --colors=always --coverage-clover=build/logs/clover.xml",
-        "cs": "vendor/bin/php-cs-fixer fix --verbose",
-        "cs-diff": "vendor/bin/php-cs-fixer fix  --verbose --diff --dry-run",
-        "deps": "vendor/bin/composer-require-checker check --config-file composer-require.json composer.json",
-        "infection": "vendor/bin/infection",
-        "lint": [
-            "find ./src \\( -name '*.xml' -or -name '*.xml.dist' -or -name '*.xlf' \\) -type f -exec xmllint --encode UTF-8 --output '{}' --format '{}' \\;",
-            "find ./src \\( -name '*.yml' -or -name '*.yaml' \\) -not -path '*/vendor/*' | xargs yaml-lint"
-        ],
-        "phpmd": "vendor/bin/phpmd src,tests ansi phpmd.xml",
-        "phpstan": "vendor/bin/phpstan analyse",
-        "psalm": "vendor/bin/psalm",
-        "test": "vendor/bin/phpunit --colors=always"
-    }
+    "prefer-stable": true
 }

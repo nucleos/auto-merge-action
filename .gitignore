@@ -1,19 +1,14 @@
-###> symfony/framework-bundle ###
 /bin
 /.env
 !/.env.dist
-/build
-/vendor/
-/vendor-bin/*/vendor/
-###< symfony/framework-bundle ###
-
-###> symfony/phpunit-bridge ###
-.phpunit
+.php-cs-fixer.cache
 .phpunit.result.cache
-/phpunit.xml
-###< symfony/phpunit-bridge ###
-
-###> friendsofphp/php-cs-fixer ###
-/.php_cs
-/.php-cs-fixer.cache
-###< friendsofphp/php-cs-fixer ###
+coverage
+composer.lock
+phpunit.xml
+Makefile
+/build/
+/vendor/
+!/vendor-bin/tools/composer.lock
+/vendor-bin/tools/vendor/
+/vendor-bin/tools/bin/

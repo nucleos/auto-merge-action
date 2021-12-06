@@ -6,7 +6,6 @@
 coverage
 composer.lock
 phpunit.xml
-Makefile
 /build/
 /vendor/
 !/vendor-bin/tools/composer.lock

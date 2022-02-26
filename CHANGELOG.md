@@ -2,27 +2,49 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 1.3.0 - TBD
+## 1.3.0 - 2022-02-26
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [1.3.0](https://github.com/nucleos/auto-merge-action/milestone/8)
 
-- Nothing.
+Feature release (minor)
 
-### Deprecated
+### 1.3.0
 
-- Nothing.
+- Total issues resolved: **0**
+- Total pull requests resolved: **23**
+- Total contributors: **2**
 
-### Removed
+#### dependency
 
-- Nothing.
+ - [314: Bump knplabs/github-api from 3.5.0 to 3.5.1](https://github.com/nucleos/auto-merge-action/pull/314) thanks to @dependabot[bot]
+ - [305: Bump nyholm/psr7 from 1.4.1 to 1.5.0](https://github.com/nucleos/auto-merge-action/pull/305) thanks to @dependabot[bot]
+ - [301: Bump ergebnis/composer-normalize from 2.23.0 to 2.23.1](https://github.com/nucleos/auto-merge-action/pull/301) thanks to @dependabot[bot]
+ - [298: Bump symfony/dotenv from 6.0.2 to 6.0.3](https://github.com/nucleos/auto-merge-action/pull/298) thanks to @dependabot[bot]
+ - [297: Bump symfony/http-client from 6.0.2 to 6.0.3](https://github.com/nucleos/auto-merge-action/pull/297) thanks to @dependabot[bot]
+ - [296: Bump symfony/console from 6.0.2 to 6.0.3](https://github.com/nucleos/auto-merge-action/pull/296) thanks to @dependabot[bot]
+ - [295: Bump symfony/string from 6.0.2 to 6.0.3](https://github.com/nucleos/auto-merge-action/pull/295) thanks to @dependabot[bot]
+ - [290: Bump knplabs/github-api from 3.4.0 to 3.5.0](https://github.com/nucleos/auto-merge-action/pull/290) thanks to @dependabot[bot]
+ - [274: Bump ergebnis/composer-normalize from 2.22.0 to 2.23.0](https://github.com/nucleos/auto-merge-action/pull/274) thanks to @dependabot[bot]
+ - [272: Bump ergebnis/test-util from 1.5.0 to 1.6.0](https://github.com/nucleos/auto-merge-action/pull/272) thanks to @dependabot[bot]
+ - [269: Bump symfony/console from 6.0.1 to 6.0.2](https://github.com/nucleos/auto-merge-action/pull/269) thanks to @dependabot[bot]
+ - [268: Bump symfony/http-client from 6.0.1 to 6.0.2](https://github.com/nucleos/auto-merge-action/pull/268) thanks to @dependabot[bot]
+ - [267: Bump symfony/string from 6.0.1 to 6.0.2](https://github.com/nucleos/auto-merge-action/pull/267) thanks to @dependabot[bot]
+ - [266: Bump ergebnis/composer-normalize from 2.21.0 to 2.22.0](https://github.com/nucleos/auto-merge-action/pull/266) thanks to @dependabot[bot]
+ - [265: Bump symfony/dotenv from 6.0.1 to 6.0.2](https://github.com/nucleos/auto-merge-action/pull/265) thanks to @dependabot[bot]
+ - [263: Bump ergebnis/composer-normalize from 2.18.0 to 2.21.0](https://github.com/nucleos/auto-merge-action/pull/263) thanks to @dependabot[bot]
+ - [254: Bump symfony/dotenv from 6.0.0 to 6.0.1](https://github.com/nucleos/auto-merge-action/pull/254) thanks to @dependabot[bot]
+ - [253: Bump symfony/http-client from 6.0.0 to 6.0.1](https://github.com/nucleos/auto-merge-action/pull/253) thanks to @dependabot[bot]
+ - [252: Bump symfony/console from 6.0.0 to 6.0.1](https://github.com/nucleos/auto-merge-action/pull/252) thanks to @dependabot[bot]
+ - [251: Bump ergebnis/composer-normalize from 2.17.0 to 2.18.0](https://github.com/nucleos/auto-merge-action/pull/251) thanks to @dependabot[bot]
+ - [250: Bump knplabs/github-api from 3.3.0 to 3.4.0](https://github.com/nucleos/auto-merge-action/pull/250) thanks to @dependabot[bot]
 
-### Fixed
+#### Enhancement
 
-- Nothing.
+ - [256: Remove composer-bin plugin](https://github.com/nucleos/auto-merge-action/pull/256) thanks to @core23
+ - [247: Update build tools](https://github.com/nucleos/auto-merge-action/pull/247) thanks to @core23
 
 ## 1.2.0 - 2021-12-04
 
